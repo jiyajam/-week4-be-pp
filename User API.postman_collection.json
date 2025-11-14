@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "2a82ce1a-46ee-4025-8fc0-e5e17a148d90",
+		"name": "User API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49558951",
+		"_collection_link": "https://jiyajam-1228567.postman.co/workspace/jiya's-Workspace~1ea7549f-e069-47e6-805a-3375bab88a3d/collection/49558951-2a82ce1a-46ee-4025-8fc0-e5e17a148d90?action=share&source=collection_link&creator=49558951"
+	},
+	"item": [
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Matti Seppänen\",\n    \"email\":\"matti@mail.com\",\n    \"password\": \"12345\",\n    \"phone_number\":\"+192959977006\",\n    \"gender\":\"Male\",\n    \"date_of_birth\":\"19-03-1997\",\n    \"membership_status\": \"active\",\n    \"account_verified\":\"verified\",\n    \"country\":\"Finland\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Sarah Seppänen\",\n    \"email\":\"matti@mail.com\",\n    \"password\": \"12345\",\n    \"phone_number\":\"+192959977006\",\n    \"gender\":\"Male\",\n    \"date_of_birth\":\"19-03-1997\",\n    \"membership_status\": \"active\",\n    \"account_verified\":\"verified\",\n    \"country\":\"Finland\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/users/69144c684b3012aceb4fab81",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"69144c684b3012aceb4fab81"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

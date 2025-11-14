@@ -1,4 +1,3 @@
-// controllers/userController.js
 const User = require('../models/userModel')
 
 // GET /users
@@ -28,7 +27,7 @@ const createUser = (req, res) => {
     date_of_birth,
     membership_status,
     account_verified,
-    country,
+    country
   )
 
   if (newUser) {
@@ -51,7 +50,7 @@ const getUserById = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-  const userId = req.params.tourId
+  const userId = req.params.userId
   const updatedData = req.body
   const updatedUser = User.updateOneById(userId, updatedData)
   if (updatedUser) {
@@ -65,7 +64,7 @@ const deleteUser = (req, res) => {
   const userId = req.params.userId
   const isDeleted = User.deleteOneById(userId)
   if (isDeleted) {
-    res.status(204).send();
+    res.status(204).send()
   } else {
     res.status(404).json({ message: 'User not found' })
   }

@@ -14,7 +14,7 @@ const addOne = (
   date_of_birth,
   membership_status,
   account_verified,
-  country,
+  country
 ) => {
   if (
     !name ||
@@ -59,7 +59,7 @@ const updateOneById = (id, updatedData) => {
   // Only update fields that exist in updatedData
   Object.keys(updatedData).forEach((key) => {
     if (updatedData[key] !== undefined) {
-      tour[key] = updatedData[key]
+      user[key] = updatedData[key]
     }
   })
 
