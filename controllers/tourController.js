@@ -55,7 +55,7 @@ const updateTour = (req, res) => {
   if (updatedTour) {
     res.json(updatedTour)
   } else {
-    res.status(404).json({ message: 'Tour not found' })
+    res.status(404).json({ message: 'Tour is not found' })
   }
 }
 
@@ -65,7 +65,7 @@ const deleteTour = (req, res) => {
   if (isDeleted) {
     res.status(204).send();
   } else {
-    res.status(404).json({ message: 'Tour not found' })
+    res.status(404).json({ message: 'Tour is not found' })
   }
 }
 
