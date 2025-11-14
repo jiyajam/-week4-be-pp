@@ -63,7 +63,7 @@ const deleteTour = (req, res) => {
   const tourId = req.params.tourId
   const isDeleted = Tour.deleteOneById(tourId)
   if (isDeleted) {
-    res.json({ message: 'Deleted successfully' })
+    res.status(204).send();
   } else {
     res.status(404).json({ message: 'Tour not found' })
   }
